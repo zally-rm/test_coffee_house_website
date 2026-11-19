@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="icon" type="img/x-icon" href="img/logo.svg">
+    <title>| Coffee House</title>
+</head>
+<body>
+    <header id="header">
+        <img src="img/logo.svg" alt="resource coffee house logo">
+        <nav id="mainbar">
+            <ul>
+                <li><a href="#favorite_section" class="dark_text">Favorite coffee</a></li>
+                <li><a href="#about_section" class="dark_text">About</a></li>
+                <li><a href="#mobile_section" class="dark_text">Mobile app</a></li>
+                <li><a href="#footer" class="dark_text">Contact us</a></li>
+            </ul>
+        </nav>
+        <div id="coffee_menu">
+            <a href="menu.html" class="dark_text">Menu <img src="img/coffee-cup.svg" alt="coffee cup"></a>
+        </div>
+        <div id="burger_icon">
+            <button id="burger_btn" onclick="show_nav()">
+                <div>
+                    <img src="img/Vector.svg" alt="vector" id="burger_vector1">
+                    <img src="img/Vector.svg" alt="vector" id="burger_vector2">
+                </div>
+            </button>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="#favorite_section" class="dark_text" onclick="closeNavFirst()">Favorite coffee</a></li>
+                <li><a href="#about_section" class="dark_text" onclick="closeNavFirst()">About</a></li>
+                <li><a href="#mobile_section" class="dark_text" onclick="closeNavFirst()">Mobile app</a></li>
+                <li><a href="#footer" class="dark_text" onclick="closeNavFirst()">Contact us</a></li>
+            </ul>
+            <div id="coffee_menu_sidebar">
+                <a href="menu.html" class="dark_text">Menu <img src="img/coffee-cup.svg" alt="coffee cup"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="options_section">
+            <h2 class="dark_text">Behind each of our cups hides an <span class="brown_text">amazing surprise</span></h2>
+            <div id="menu_options_buttons">
+                <a href="" id="coffee_button" class="light_text">
+                    <div id="light_div"><img src="img/realistic-coffee-cup.png" alt="coffe cup icon"></div>
+                    Coffee
+                </a>
+                <a href="" id="tea_button" class="dark_text">
+                    <div><img src="img/teapot.png" alt="teapot icon"></div>
+                    Tea
+                </a>
+                <a href="" id="dessert_button" class="dark_text">
+                    <div><img src="img/cake-icon.png" alt="slice of cake icon"></div>
+                    Dessert
+                </a>
+            </div>
+            <div id="coffee_section">
+                <div id="irish_coffee">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Irish coffee</p>
+                            <p class="dark_text drink_description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                        </div>
+                        <p class="dark_text drink_price">$7.00</p>
+                    </div>
+                </div>
+                <div id="kahlua_coffee">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Kahlua coffee</p>
+                            <p class="dark_text drink_description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+                        </div>
+                        <p class="dark_text drink_price">$7.00</p>
+                    </div>
+                </div>
+                <div id="honey_raf">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Honey raf</p>
+                            <p class="dark_text drink_description">Espresso with frothed milk, cream and aromatic honey</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.50</p>
+                    </div>
+                </div>
+                <div id="ice_cappuccino">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Ice cappuccino</p>
+                            <p class="dark_text drink_description">Cappuccino with soft thick foam in summer version with ice</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.00</p>
+                    </div>
+                </div>
+                <div id="espresso">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Espresso</p>
+                            <p class="dark_text drink_description">Classic black coffee</p>
+                        </div>
+                        <p class="dark_text drink_price">$4.50</p>
+                    </div>
+                </div>
+                <div id="latte">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Latte</p>
+                            <p class="dark_text drink_description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.50</p>
+                    </div>
+                </div>
+                <div id="latte_macchiato">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Latte macchiato</p>
+                            <p class="dark_text drink_description">Espresso with frothed milk and chocolate</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.50</p>
+                    </div>
+                </div>
+                <div id="coffee_with_cognac">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Coffee with cognac</p>
+                            <p class="dark_text drink_description">Fragrant black coffee with cognac and whipped cream</p>
+                        </div>
+                        <p class="dark_text drink_price">$6.50</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tea_section">
+                <div id="moroccan" class="tea_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Moroccan</p>
+                            <p class="dark_text drink_description">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+                        </div>
+                        <p class="dark_text drink_price">$4.50</p>
+                    </div>
+                </div>
+                <div id="ginger" class="tea_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Ginger</p>
+                            <p class="dark_text drink_description">Original black tea with fresh ginger, lemon and honey</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.00</p>
+                    </div>
+                </div>
+                <div id="cranberry" class="tea_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Cranberry</p>
+                            <p class="dark_text drink_description">Invigorating black tea with cranberry and honey</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.00</p>
+                    </div>
+                </div>
+                <div id="sea_buckthorn" class="tea_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Sea Buckthorn</p>
+                            <p class="dark_text drink_description">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.50</p>
+                    </div>
+                </div>
+            </div>
+            <div id="dessert_section">
+                <div id="marble_cheesecake" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Marble cheesecake</p>
+                            <p class="dark_text drink_description">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+                        </div>
+                        <p class="dark_text drink_price">$3.50</p>
+                    </div>
+                </div>
+                <div id="red_velvet" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Red velvet</p>
+                            <p class="dark_text drink_description">Layer cake with cream cheese frosting</p>
+                        </div>
+                        <p class="dark_text drink_price">$4.00</p>
+                    </div>
+                </div>
+                <div id="cheesecakes" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Cheesecakes</p>
+                            <p class="dark_text drink_description">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+                        </div>
+                        <p class="dark_text drink_price">$4.50</p>
+                    </div>
+                </div>
+                <div id="creme_brulee" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Creme Brulee</p>
+                            <p class="dark_text drink_description">Delicate creamy dessert in a caramel basket with wild berries</p>
+                        </div>
+                        <p class="dark_text drink_price">$4.00</p>
+                    </div>
+                </div>
+                <div id="pancakes" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Pancakes</p>
+                            <p class="dark_text drink_description">Tender pancakes with strawberry jam and fresh strawberries</p>
+                        </div>
+                        <p class="dark_text drink_price">$4.50</p>
+                    </div>
+                </div>
+                <div id="honey_cake" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Honey Cake</p>
+                            <p class="dark_text drink_description">Classic honey cake with delicate custard</p>
+                        </div>
+                        <p class="dark_text drink_price">$4.50</p>
+                    </div>
+                </div>
+                <div id="chocolate_cake" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Chocolate Cake</p>
+                            <p class="dark_text drink_description">Cake with hot chocolate filling and nuts with dried apricots</p>
+                        </div>
+                        <p class="dark_text drink_price">$5.50</p>
+                    </div>
+                </div>
+                <div id="black_forest" class="dessert_product">
+                    <div class="drink_img"></div>
+                    <div class="drink_text">
+                        <div>
+                            <p class="dark_text drink_name">Black Forest</p>
+                            <p class="dark_text drink_description">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
+                        </div>
+                        <p class="dark_text drink_price">$6.50</p>
+                    </div>
+                </div>
+            </div>
+            <div id="refresh_button">
+                <button><img src="img/refresh.svg" alt="refresh button"></button>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div id="contacts">
+            <div id="contacts_text">
+                <h2 class="light_text">Sip, Savor, Smile. <span class="brown_text">It’s coffee time!</span></h2>
+                <div id="socials_buttons">
+                    <button><img src="img/twitter.svg" alt="twitter logo"></button>
+                    <button><img src="img/instagram.svg" alt="instagram logo"></button>
+                    <button><img src="img/facebook.svg" alt="facebook logo"></button>
+                </div>
+            </div>
+            <div id="contact_info">
+                <h3 class="light_text">Contact us</h3>
+                <div id="contacts_buttons">
+                    <a href="https://maps.app.goo.gl/F2Wmj4jUGGyncpKeA" id="location_button" target="_blank" class="light_text"> <!-- The Shire's Rest Cafe -->
+                        <img src="img/location.svg" alt="location pin icon">
+                        8558 Green Rd., LA
+                    </a>
+                    <a href="tel:+6478881505" id="phone_button" class="light_text">
+                        <img src="img/phone.svg" alt="phone icon">
+                        +1 (603) 555-0123</a>
+                    <div id="clock_button" class="light_text">
+                        <img src="img/clock.svg" alt="clock icon">
+                        Mon-Sat: 9:00 AM – 23:00 PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="apps_menu.js"></script>
+</body>
+</html>

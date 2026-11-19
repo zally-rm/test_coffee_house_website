@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="img/x-icon" href="img/logo.svg">
+    <title>| Coffee House</title>
+</head>
+<body id="body">
+    <header id="header">
+        <img src="img/logo.svg" alt="resource coffee house logo">
+        <nav id="mainbar">
+            <ul>
+                <li><a href="#favorite_section" class="dark_text">Favorite coffee</a></li>
+                <li><a href="#about_section" class="dark_text">About</a></li>
+                <li><a href="#mobile_section" class="dark_text">Mobile app</a></li>
+                <li><a href="#footer" class="dark_text">Contact us</a></li>
+            </ul>
+        </nav>
+        <div id="coffee_menu">
+            <a href="menu.html" class="dark_text">Menu <img src="img/coffee-cup.svg" alt="coffee cup"></a>
+        </div>
+        <div id="burger_icon">
+            <button id="burger_btn" onclick="show_nav()">
+                <div>
+                    <img src="img/Vector.svg" alt="vector" id="burger_vector1">
+                    <img src="img/Vector.svg" alt="vector" id="burger_vector2">
+                </div>
+            </button>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="#favorite_section" class="dark_text" onclick="closeNavFirst()">Favorite coffee</a></li>
+                <li><a href="#about_section" class="dark_text" onclick="closeNavFirst()">About</a></li>
+                <li><a href="#mobile_section" class="dark_text" onclick="closeNavFirst()">Mobile app</a></li>
+                <li><a href="#footer" class="dark_text" onclick="closeNavFirst()">Contact us</a></li>
+            </ul>
+            <div id="coffee_menu_sidebar">
+                <a href="menu.html" class="dark_text">Menu <img src="img/coffee-cup.svg" alt="coffee cup"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="enjoy_section">
+            <div id="enjoy_container">
+                <video id="background_video" autoplay loop muted>
+                    <source src="img/enjoy-video.mp4" type="video/mp4">
+                </video>
+                <div id="enjoy_text">
+                    <h1 class="light_text"><span class="brown_text">Enjoy</span> premium coffee at our charming cafe</h1>
+                    <p class="light_text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+                    <div id="enjoy_menu_changing_buttons">
+                        <a href="menu.html" id="enjoy_menu_nohover" class="dark_text"><div>Menu</div></a>
+                        <a href="menu.html" id="enjoy_menu_hover" class="dark_text"><div>Menu <img src="img/coffee-cup.svg" alt="coffee cup"></div></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="favorite_section">
+            <h2 class="dark_text">Choose your <span class="brown_text">favorite</span> coffee</h2>
+            <div id="favorite_container">
+                <div id="favorite_slider">
+                    <button id="left_btn_slider" onclick="plusSlides(-1)"><img src="img/arrow-left.svg" alt="left arrow"></button>
+                    <div id="outer_slider">
+                        <div id="slider">
+                            <div class="slider_card" id="smores_slider">
+                                <img src="img/coffee-slider-1.svg" alt="smores frapuccino"> <!-- height="480" -->
+                                <p class="dark_text drink_name">S’mores Frappuccino</p>
+                                <p class="dark_text drink_description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                <p class="dark_text drink_price">$5.50</p>
+                            </div>
+                            <div class="slider_card" id="caramel_slider">
+                                <img src="img/caramel-slider.png" alt="caramel macchiato">
+                                <p class="dark_text drink_name">Caramel Macchiato</p>
+                                <p class="dark_text drink_description">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                <p class="dark_text drink_price">$5.00</p>
+                            </div>
+                            <div class="slider_card" id="ice_slider">
+                                <img src="img/ice-slider.png" alt="ice coffee">
+                                <p class="dark_text drink_name">Ice Coffee</p>
+                                <p class="dark_text drink_description">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                <p class="dark_text drink_price">$4.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="right_btn_slider" onclick="plusSlides(1)"><img src="img/arrow-right.svg" alt="left arrow"></button>
+                </div>
+                <div id="controls">
+                    <button class="active"></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </section>
+        <section id="about_section">
+            <h2 class="dark_text">Resource is <span class="brown_text">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
+            <div id="about_images">
+                <div id="about_img_container1">
+                    <div id="image1_box"></div>
+                    <div id="image2_box"></div>
+                </div>
+                <div id="about_img_container2">
+                    <div id="image3_box"></div>
+                    <div id="image4_box"></div>
+                </div>
+            </div>
+        </section>
+        <section id="mobile_section">
+            <div id="mobile_text">
+                <h2 class="dark_text"><span class="brown_text">Download</span> our apps to start ordering</h2>
+                <p class="dark_text">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+                <div id="store_buttons">
+                    <a class="dark_text">
+                        <img src="img/app-store.svg" alt="app store icon">
+                        <div>
+                            <span class="small_store_button_text">Available on the </span>App Store
+                        </div>
+                    </a>
+                    <a class="dark_text">
+                        <img src="img/google-play.svg" alt="google play icon">
+                        <div>
+                            <span class="small_store_button_text">Available on </span>Google Play
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <img src="img/mobile-screens.svg" alt="cellphones showing the mobile app">
+        </section>
+    </main>
+    <footer id="footer">
+        <div id="contacts">
+            <div id="contacts_text">
+                <h2 class="light_text">Sip, Savor, Smile. <span class="brown_text">It’s coffee time!</span></h2>
+                <div id="socials_buttons">
+                    <button><img src="img/twitter.svg" alt="twitter logo"></button>
+                    <button><img src="img/instagram.svg" alt="instagram logo"></button>
+                    <button><img src="img/facebook.svg" alt="facebook logo"></button>
+                </div>
+            </div>
+            <div id="contact_info">
+                <h3 class="light_text">Contact us</h3>
+                <div id="contacts_buttons">
+                    <a href="https://maps.app.goo.gl/F2Wmj4jUGGyncpKeA" id="location_button" target="_blank" class="light_text"> <!-- The Shire's Rest Cafe -->
+                        <img src="img/location.svg" alt="location pin icon">
+                        8558 Green Rd., LA
+                    </a>
+                    <a href="tel:+6478881505" id="phone_button" class="light_text">
+                        <img src="img/phone.svg" alt="phone icon">
+                        +1 (603) 555-0123</a>
+                    <div id="clock_button" class="light_text">
+                        <img src="img/clock.svg" alt="clock icon">
+                        Mon-Sat: 9:00 AM – 23:00 PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="apps.js"></script>
+</body>
+</html>

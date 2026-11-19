@@ -1,0 +1,672 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 1440px;
+    background-color: #E1D4C9;
+    padding: 20px 0px 40px 0px;
+    gap: 100px;
+    margin: 0px auto; /* auto to keep the layout centered when scaling the screen */
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(Inter-VariableFont_slnt\,wght.ttf);
+}
+
+.dark_text {
+    color: #403F3D;
+    font-family: Inter;
+    font-size: 16px;
+}
+
+.light_text {
+    color: #E1D4C9;
+    font-family: Inter;
+}
+
+.brown_text {
+    color: #B0907A;
+    font-family: Inter;
+    font-style: italic;
+}
+
+h1, h2 {
+    margin: 0px;
+}
+
+header {
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+    #mainbar {
+        display: flex;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        align-self: stretch;
+        padding-left: 0px;
+    }
+
+    nav ul li a, header a {
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    #coffee_menu {
+        display: flex;
+        align-items: center;
+        height: 49px;
+    }
+
+    #burger_icon {
+        display: none;
+    }
+
+    #burger_icon button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 100px;
+        border: 1px solid #665F55;
+        background: none;
+    }
+
+    #burger_icon button div {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #burger_icon button div img {
+        transition: 0.5s;
+    }
+
+    /* buttons hover */
+    header li:hover, #coffee_menu a:hover {
+        border-bottom: 2px solid #403F3D;
+    }
+
+    #sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 80px;
+        right: 0;
+        background-color: #E1D4C9;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    #sidebar ul {
+        display: flex;
+        padding: 0px 40px;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    #sidebar ul li a, #coffee_menu_sidebar a {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+        display: flex;
+        gap: 16px;
+    }
+
+    #coffee_menu_sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #coffee_menu_sidebar a img {
+        height: 40px;
+    }
+
+main {
+    padding: 16px 40px 0px 40px;
+}
+
+/* menu options section */
+#options_section h2 {
+    width: 800px;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 75px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+#menu_options_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 40px;
+}
+
+    #menu_options_buttons a {
+        border-radius: 100px;
+        border: 1px solid #C1B6AD;
+        padding: 7px 15px 7px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-decoration: none;
+        transition: background-color 1s, color 1s;
+    }
+
+    #menu_options_buttons a div {
+        display: flex;
+        border-radius: 100px;
+        background-color: #C1B6AD;
+        padding: 8px 7px;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 1s;
+    }
+
+    #coffee_button, #tea_button:hover, #dessert_button:hover {
+        background-color: #665F55;
+        color: #E1D4C9;
+    }
+
+    #coffee_button #light_div, #tea_button:hover div, #dessert_button:hover div {
+        background-color: #E1D4C9;
+    }
+
+    #menu_options_buttons a div img {
+        width: 16px;
+    }
+
+    #cake-icon {
+        width: 14px;
+    }
+
+/* menu section */
+#coffee_section {
+    display: flex;
+    gap: 40px;
+    max-width: 1360px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    transition: display 1s;
+}
+
+#tea_section, #dessert_section {
+    display: none;
+    gap: 40px;
+    max-width: 1360px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    transition: display 1s;
+}
+
+    #coffee_section > div, #tea_section > div, #dessert_section > div {
+        height: 504px;
+        width: 308px;
+        border: 1px solid #C1B6AD;
+        border-radius: 40px;
+    }
+
+    .drink_img {
+        width: 308px;
+        height: 308px;
+        border-radius: 40px;
+        background-position: center;
+        background-size: 110%;
+        transition: background-size 1s;
+    }
+
+    .drink_text {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 156px;
+    }
+
+    .drink_name, .drink_price {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        margin: 0px;
+    }
+
+    .drink_description {
+        line-height: 24px;
+        margin: 0px;
+        padding-top: 12px;
+    }
+
+    #refresh_button {
+        display: none;
+        justify-content: center;
+        padding-bottom: 100px;
+    }
+
+    #refresh_button button {
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        border: 1px solid #665F55;
+        background-color: #E1D4C9;
+    }
+
+    /* backgrounds for menu items */
+    /* coffee */
+    #irish_coffee .drink_img {
+        background-image: url(img/irish-coffee.svg);
+    }
+
+    #kahlua_coffee .drink_img {
+        background-image: url(img/kahlua-coffee.jpg);
+    }
+
+    #honey_raf .drink_img {
+        background-image: url(img/honey-raf.jpg);
+    }
+
+    #ice_cappuccino .drink_img {
+        background-image: url(img/ice-capuccino.jpg);
+    }
+
+    #espresso .drink_img {
+        background-image: url(img/espresso.jpg);
+    }
+
+    #latte .drink_img {
+        background-image: url(img/latte.jpg);
+    }
+
+    #latte_macchiato .drink_img {
+        background-image: url(img/latte-macchiato.jpg);
+    }
+
+    #coffee_with_cognac .drink_img {
+        background-image: url(img/coffee-cognac.jpg);
+    }
+
+    /* tea */
+    #moroccan .drink_img {
+        background-image: url(img/moroccan.png);
+    }
+    
+    #ginger .drink_img {
+        background-image: url(img/ginger.png);
+    }
+
+    #cranberry .drink_img {
+        background-image: url(img/cranberry.png);
+    }
+    
+    #sea_buckthorn .drink_img {
+        background-image: url(img/sea-buckthorn.png);
+    }
+
+    /* dessert */
+    #marble_cheesecake .drink_img {
+        background-image: url(img/marble-cheesecake.png);
+    }
+    
+    #red_velvet .drink_img {
+        background-image: url(img/red-velvet.png);
+    }
+    
+    #cheesecakes .drink_img {
+        background-image: url(img/cheesecakes.png);
+    }
+    
+    #creme_brulee .drink_img {
+        background-image: url(img/creme-brulee.png);
+    }
+    
+    #pancakes .drink_img {
+        background-image: url(img/pancakes.png);
+    }
+    
+    #honey_cake .drink_img {
+        background-image: url(img/honey-cake.png);
+    }
+    
+    #chocolate_cake .drink_img {
+        background-image: url(img/chocolate-cake.png);
+    }
+    
+    #black_forest .drink_img {
+        background-image: url(img/black-forest.png);
+    }
+
+    /* background zoom when hover */
+    #coffee_section > div:hover .drink_img, #tea_section > div:hover .drink_img, #dessert_section > div:hover .drink_img {
+        background-size: 100%;
+    }
+
+
+/* contacts (footer) */
+footer {
+    padding: 0px 40px;
+}
+#contacts {
+    border-radius: 40px;
+    background-color: #665F55;
+    display: flex;
+    gap: 100px;
+    padding: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+    #contacts_text {
+        width: 530px;
+    }
+
+    #contacts_text h2 {
+        font-size: 60px;
+        line-height: 75px;
+        font-weight: 600;
+        text-align: start;
+    }
+
+        #socials_buttons {
+            padding-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #socials_buttons button {
+            border: 1px solid #C1B6AD;
+            border-radius: 100px;
+            background: none;
+            width: 60px;
+            height: 60px;
+            transition: background-color 1s;
+        }
+
+        #socials_buttons button img {
+            transition: filter 1s;
+        }
+
+        #socials_buttons button:hover {
+            background-color: #E1D4C9;
+            cursor: pointer;
+        }
+
+        #socials_buttons button:hover img {
+            filter: invert(100%);
+        }
+
+    #contact_info {
+        display: flex;
+        flex-direction: column;
+        width: 530px;
+        align-items: flex-start;
+    }
+
+        #contact_info h3 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 30px;
+            margin: 0px;
+            padding-bottom: 35px;
+        }
+
+        #contacts_buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        #contact_info a {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            padding: 0px;
+            display: flex;
+            gap: 8px;
+        }
+
+        #location_button {
+            width: 270px;
+        }
+
+        /* #phone_button {
+            width: 160px;
+        } */
+
+        #contacts_buttons div {
+            display: flex;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25px;
+            width: 270px;
+        }
+
+        /* #contact_info a {
+            text-decoration: none;
+            display: flex;
+            gap: 8px;
+        } */
+
+        #contacts_info a img {
+            width: 20px;
+            height: 20px;
+        }
+
+        #contact_info a:hover {
+            border-bottom: 2px solid #E1D4C9;
+        }
+
+
+/* ----- for tablets and mobile devices ----- */
+
+/* viewports between 380px and 767px (between mobile and tablet) */
+@media (min-width: 380px) and (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        padding: 0rem 1rem;
+        align-items: center;
+    }
+
+        #mainbar, #coffee_menu {
+            display: none;
+        }
+
+        #burger_icon {
+            display: inline;
+        }
+
+    main {
+        padding: 1rem 16px 0px 16px;
+    }
+
+    #options_section h2 {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 125%;
+    }
+
+        #menu_options_buttons {
+            gap: 0.5rem;
+            padding-bottom: 40px;
+        }
+
+        #espresso, #latte, #latte_macchiato, #coffee_with_cognac {
+            display: none;
+        }
+
+        #menu_section {
+            padding-bottom: 2.5rem;
+        }
+
+        #refresh_button {
+            display: flex;
+        }
+
+    footer {
+        padding: 0rem 1rem;
+    }
+
+        #contacts {
+            flex-direction: column;
+            gap: 2.6rem;
+            padding: 3.7rem 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contacts_text {
+            width: 100%;
+        }
+
+        #contacts_text h2 {
+            font-size: 2rem;
+            line-height: 125%;
+        }
+
+        #socials_buttons button {
+            pointer-events: none;
+        }
+
+        #contact_info {
+            width: 100%;
+        }
+
+        #contact_info h3 {
+            padding-bottom: 2.5rem;
+        }
+
+        #phone_button {
+            width: 100%;
+        }
+
+    #tea_button, #dessert_button {
+        pointer-events: none;
+    }
+
+    div {
+        pointer-events: none;
+    }
+}
+
+/* viewports between 768px and 1000px (between tablet and desktop) */
+@media (min-width: 768px) and (max-width: 1000px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        padding: 0rem 2.5rem;
+        align-items: center;
+    }
+
+        #mainbar, #coffee_menu {
+            display: none;
+        }
+
+        #burger_icon {
+            display: inline;
+        }
+
+    #options_section h2 {
+        width: 100%;
+        font-size: 3.75rem;
+        font-weight: 600;
+        line-height: 125%;
+    }
+
+        #espresso, #latte, #latte_macchiato, #coffee_with_cognac {
+            display: none;
+        }
+
+        #menu_section {
+            padding-bottom: 2.5rem;
+        }
+
+        #refresh_button {
+            display: flex;
+        }
+
+    #contacts {
+        flex-direction: column;
+        gap: 6.2rem;
+        padding: 6.2rem 3.7rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+        #contacts_text {
+            width: 100%;
+        }
+
+        #contacts_text h2 {
+            line-height: 125%;
+        }
+
+        #socials_buttons button {
+            pointer-events: none;
+        }
+
+        #contact_info {
+            width: 100%;
+        }
+
+        #contact_info a {
+            pointer-events: none;
+        }
+
+        #contact_info h3 {
+            padding-bottom: 2.5rem;
+        }
+
+        #phone_button {
+            width: 100%;
+        }
+
+    #tea_button, #dessert_button {
+        pointer-events: none;
+    }
+
+    div {
+        pointer-events: none;
+    }
+}

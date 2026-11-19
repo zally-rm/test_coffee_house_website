@@ -1,0 +1,982 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 1440px;
+    background-color: #E1D4C9;
+    padding: 20px 0px 40px 0px;
+    gap: 100px;
+    margin: 0px auto; /* auto to keep the layout centered when scaling the screen */
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(Inter-VariableFont_slnt\,wght.ttf);
+}
+
+.dark_text {
+    color: #403F3D;
+    font-family: Inter;
+    font-size: 16px;
+}
+
+.light_text {
+    color: #E1D4C9;
+    font-family: Inter;
+}
+
+.brown_text {
+    color: #B0907A;
+    font-family: Inter;
+    font-style: italic;
+}
+
+h1, h2 {
+    margin: 0px;
+}
+
+header {
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+    #mainbar {
+        display: flex;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        align-self: stretch;
+        padding-left: 0px;
+    }
+
+    nav ul li a, header a {
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    #coffee_menu {
+        display: flex;
+        align-items: center;
+        height: 49px;
+    }
+
+    #burger_icon {
+        display: none;
+    }
+
+    #burger_icon button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 100px;
+        border: 1px solid #665F55;
+        background: none;
+    }
+
+    #burger_icon button div {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #burger_icon button div img {
+        transition: 0.5s;
+    }
+
+    /* buttons hover */
+    header li:hover, #coffee_menu a:hover {
+        border-bottom: 2px solid #403F3D;
+    }
+
+    #sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 80px;
+        right: 0;
+        background-color: #E1D4C9;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    #sidebar ul {
+        display: flex;
+        padding: 0px 40px;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    #sidebar ul li a, #coffee_menu_sidebar a {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+        display: flex;
+        gap: 16px;
+    }
+
+    #coffee_menu_sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #coffee_menu_sidebar a img {
+        height: 40px;
+    }
+
+main {
+    padding-top: 20px;
+}
+
+/* enjoy section */
+#enjoy_section, #mobile_section {
+    display: flex;
+    padding: 0px 40px 100px 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#enjoy_section {
+    height: 642px;
+}
+
+    #enjoy_container {
+        background: url(img/enjoy-video.mp4);
+        background-position: center;
+        background-size: cover;
+        /* padding: 100px; */
+        border-radius: 40px;
+        width: 1360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        /* height: 642px; */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+        #background_video {
+            width: 100%;
+            z-index: -1;
+            border-radius: 40px;
+        }
+
+        #enjoy_text {
+            width: 530px;
+            position: absolute;
+            top: 200px;
+            left: 140px;
+        }
+
+        #enjoy_text h1 {
+            font-size: 72px;
+            font-weight: 600;
+            line-height: 75.6px;
+            padding-bottom: 40px;
+        }
+
+        #enjoy_text p {
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 40px;
+            margin: 0px;
+        }
+
+        #enjoy_text a {
+            background-color: #E1D4C9;
+            border-radius: 100px;
+            max-width: 200px;
+            padding: 20px 66px;
+            border: none;
+            font-weight: 600;
+            line-height: 24px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        #enjoy_menu_changing_buttons {
+            width: 200px;
+        }
+
+        #enjoy_menu_changing_buttons #enjoy_menu_hover div {
+            display: flex;
+            gap: 6px;
+            max-width: 200px;
+        }
+
+        #enjoy_menu_changing_buttons #enjoy_menu_hover {
+            display: none;
+        }
+
+        #enjoy_menu_changing_buttons:hover #enjoy_menu_nohover {
+            display: none;
+        }
+
+        #enjoy_menu_changing_buttons:hover #enjoy_menu_hover {
+            display: flex;
+        }
+
+/* favorite coffee section */
+#favorite_section, #about_section {
+    padding: 0px 40px 100px 40px;
+    text-align: center;
+}
+    #favorite_section h2 {
+        font-size: 60px;
+        font-weight: 600;
+        padding-bottom: 40px;
+    }
+
+    #favorite_slider {
+        display: flex;
+        /* gap: 40px; */
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+        #favorite_slider button {
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            border: 1px solid #665F55;
+            background-color: #E1D4C9;
+            transition: background-color 1s;
+        }
+
+        #favorite_slider button img {
+            transition: filter 1s;
+        }
+
+        #favorite_slider button:hover {
+            background-color: #665F55;
+            cursor: pointer;
+        }
+
+        #favorite_slider button:hover img {
+            filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(137%) hue-rotate(346deg) brightness(100%) contrast(90%);
+        }
+
+        #favorite_slider div {
+            text-align: center;
+        }
+
+        #outer_slider {
+            display: flex;
+            width: 35%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #slider {
+            display: flex;
+            /* width: 35%; */
+            position: relative;
+            left: 0;
+            transition: 1s;
+            /* overflow-x: hidden; */
+        }
+
+        /* #smores_slider  */
+        .slider_card {
+            width: 100%;
+            position: relative;
+        }
+
+        #favorite_slider div img {
+            padding-bottom: 20px;
+            height: 480px;
+        }
+
+        /* #caramel_slider, #ice_slider {
+            width: 0%;
+            position: fixed;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.4s;
+        } */
+
+        .drink_description {
+            line-height: 24px;
+            margin: 0px;
+            padding: 16px 0px;
+        }
+
+        .drink_name, .drink_price {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 30px;
+            margin: 0px;
+        }
+    
+    #controls {
+        padding-top: 40px;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+    }
+
+        #controls button {
+            width: 40px;
+            height: 4px;
+            border-radius: 100px;
+            border: none;
+            background-color: #C1B6AD;
+            margin: 0px;
+            transition: 1s;
+        }
+
+        #controls .active {
+            background-color: #665F55;
+        }
+
+/* about section */
+#about_section h2, #mobile_section h2, #contacts h2 {
+    font-size: 60px;
+    line-height: 75px;
+    font-weight: 600;
+    text-align: start;
+}
+
+#about_images {
+    display: flex;
+    padding-top: 40px;
+    gap: 40px;
+    width: 1360px;
+}
+
+    #about_img_container1, #about_img_container2 {
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    #image1_box{
+        width: 660px;
+        height: 590px;
+        border-radius: 20px;
+        background-image: url(img/about-1.svg);
+        background-position: center;
+        background-size: 110%;
+        transition: background-size 1s;
+    }
+
+    #image2_box{
+        width: 660px;
+        height: 430px;
+        border-radius: 20px;
+        background-image: url(img/about-2.svg);
+        background-position: center;
+        background-size: 110%;
+        transition: background-size 1s;
+    }
+
+    #image3_box{
+        width: 660px;
+        height: 430px;
+        border-radius: 20px;
+        background-image: url(img/about-3.svg);
+        background-position: center;
+        background-size: 110%;
+        transition: background-size 1s;
+    }
+
+    #image4_box{
+        width: 660px;
+        height: 590px;
+        border-radius: 20px;
+        background-image: url(img/about-4.svg);
+        background-position: center;
+        background-size: 110%;
+        transition: background-size 1s;
+    }
+
+    #image1_box:hover, #image2_box:hover, #image3_box:hover, #image4_box:hover {
+        background-size: 100%;
+    }
+
+/* mobile app section */
+#mobile_section {
+    gap: 100px;
+}
+
+    #mobile_text p {
+        padding: 40px 0px;
+        margin: 0px;
+        line-height: 24px;
+    }
+
+    #store_buttons {
+        display: flex;
+        gap: 19px;
+    }
+
+    #mobile_section a {
+        display: flex;
+        background-color: #E1D4C9;
+        border-radius: 100px;
+        border: 1px solid #665F55;
+        width: 160px;
+        padding: 12px 20px;
+        gap: 7px;
+        font-weight: 600;
+        align-items: center;
+        transition: background-color 1s;
+    }
+
+    #mobile_section a div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: color 1s;
+    }
+
+    .small_store_button_text {
+        font-size: 10px;
+    }
+
+    #store_buttons a img {
+        transition: filter 1s;
+    }
+
+    #store_buttons a:hover {
+        background-color: #665F55;
+        cursor: pointer;
+    }
+
+    #store_buttons a:hover img {
+        filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(137%) hue-rotate(346deg) brightness(100%) contrast(90%);
+    }
+
+    #store_buttons a:hover div {
+        color: #E1D4C9;
+    }
+
+/* contacts (footer) */
+footer {
+    padding: 0px 40px;
+}
+#contacts {
+    border-radius: 40px;
+    background-color: #665F55;
+    display: flex;
+    gap: 100px;
+    padding: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+    #contacts_text {
+        width: 530px;
+    }
+
+        #socials_buttons {
+            padding-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #socials_buttons button {
+            border: 1px solid #C1B6AD;
+            border-radius: 100px;
+            background: none;
+            width: 60px;
+            height: 60px;
+            transition: background-color 1s;
+        }
+
+        #socials_buttons button img {
+            transition: filter 1s;
+        }
+
+        #socials_buttons button:hover {
+            background-color: #E1D4C9;
+            cursor: pointer;
+        }
+
+        #socials_buttons button:hover img {
+            filter: invert(100%);
+        }
+
+    #contact_info {
+        display: flex;
+        flex-direction: column;
+        width: 530px;
+        align-items: flex-start;
+    }
+
+        #contact_info h3 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 30px;
+            margin: 0px;
+            padding-bottom: 35px;
+        }
+
+        #contacts_buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        #contact_info a {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            padding: 0px;
+            display: flex;
+            gap: 8px;
+            width: 270px;
+        }
+
+        #contacts_buttons div {
+            display: flex;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25px;
+            width: 270px;
+        }
+
+        #contacts_info a img {
+            width: 20px;
+            height: 20px;
+        }
+
+        #contact_info a:hover {
+            border-bottom: 2px solid #E1D4C9;
+        }
+
+
+/* ----- for tablets and mobile devices ----- */
+
+/* viewports smaller than 380px */
+@media (min-width:50px) and (max-width:379px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    header {
+        padding: 0rem 1rem;
+        align-items: center;
+    }
+
+        #mainbar, #coffee_menu {
+            display: none;
+        }
+
+        #burger_icon {
+            display: inline;
+        }
+
+    #enjoy_section, #favorite_section, #about_section, #mobile_section {
+        padding: 0rem 1rem 6.25rem 1rem;
+    }
+
+        #enjoy_container {
+            width: 100%;
+            padding: 3.7rem 1rem;
+        }
+
+        #enjoy_text {
+            width: 100%;
+        }
+
+        #enjoy_text h1 {
+            font-size: 2.63rem;
+            line-height: 115%;
+        }
+
+        #enjoy_menu_changing_buttons #enjoy_menu_nohover {
+            display: none;
+        }
+
+        #enjoy_menu_changing_buttons #enjoy_menu_hover {
+            display: flex;
+        }
+
+    #favorite_section h2 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+        #favorite_slider button {
+            display: none;
+        }
+
+        #outer_slider {
+            width: 100%;
+        }
+
+        #favorite_slider div img {
+            height: 18rem;
+        }
+
+    #about_section h2, #mobile_section h2, #contacts h2 {
+        font-size: 2rem;
+        line-height: 125%;
+        text-align: start;
+    }
+
+    #about_images {
+        width: 100%;
+        flex-direction: column;
+    }
+
+        #image1_box, #image4_box {
+            width: 100%;
+            background-position: center;
+            background-size: 210%;
+            pointer-events: none;
+        }
+
+        #image2_box, #image3_box {
+            display: none;
+        }
+
+    #mobile_section, #store_buttons {
+        flex-direction: column;
+    }
+
+        #mobile_section {
+            gap: 2.6rem;
+        }
+
+        #store_buttons {
+            gap: 1.3rem;
+        }
+
+        #store_buttons a {
+            pointer-events: none;
+        }
+
+        #mobile_section > img {
+            width: 100%;
+        }
+    
+    footer {
+        padding: 0rem 1rem;
+    }
+
+        #contacts {
+            flex-direction: column;
+            gap: 2.6rem;
+            padding: 3.7rem 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contacts_text {
+            width: 100%;
+        }
+
+        #socials_buttons button {
+            pointer-events: none;
+        }
+
+        #contact_info {
+            width: 100%;
+        }
+
+        #contact_info h3 {
+            padding-bottom: 2.5rem;
+        }
+
+        #contact_info a, #contacts_buttons div {
+            width: 100%;
+            font-size: 0.9rem;
+        }
+}
+
+/* viewports between 380px and 767px (between mobile and tablet) */
+@media (min-width: 380px) and (max-width: 729px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        padding: 0rem 1rem;
+        align-items: center;
+    }
+
+        #mainbar, #coffee_menu {
+            display: none;
+        }
+
+        #burger_icon {
+            display: inline;
+        }
+
+    #enjoy_section, #favorite_section, #about_section, #mobile_section {
+        padding: 0rem 1rem 6.25rem 1rem;
+    }
+
+    #enjoy_section {
+        height: 35rem;
+    }
+
+        #enjoy_container {
+            width: 100%;
+            padding: 0.1rem 1rem;
+        }
+
+        #background_video {
+            width: 70rem;
+        }
+
+        #enjoy_text {
+            width: 20rem;
+            top: 10rem;
+            left: 2rem;
+            right: 2rem;
+        }
+
+        #enjoy_text h1 {
+            font-size: 2.63rem;
+            line-height: 115%;
+        }
+
+        #enjoy_menu_changing_buttons #enjoy_menu_nohover {
+            display: none;
+        }
+
+        #enjoy_menu_changing_buttons #enjoy_menu_hover {
+            display: flex;
+        }
+
+    #favorite_section h2 {
+        font-size: 2rem;
+    }
+
+        #favorite_slider button {
+            display: none;
+        }
+
+        #outer_slider {
+            width: 100%;
+        }
+
+        #favorite_slider div img {
+            height: 21.7rem;
+        }
+
+    #about_section h2, #mobile_section h2, #contacts h2 {
+        font-size: 2rem;
+        line-height: 125%;
+        text-align: start;
+    }
+
+    #about_images {
+        width: 100%;
+        flex-direction: column;
+    }
+
+        #image1_box, #image4_box {
+            width: 100%;
+            background-position: center;
+            background-size: 210%;
+            pointer-events: none;
+        }
+
+        #image2_box, #image3_box {
+            display: none;
+        }
+
+    #mobile_section, #store_buttons {
+        flex-direction: column;
+    }
+
+        #mobile_section {
+            gap: 2.6rem;
+        }
+
+        #store_buttons {
+            gap: 1.3rem;
+        }
+
+        #store_buttons a {
+            pointer-events: none;
+        }
+
+        #mobile_section > img {
+            width: 100%;
+        }
+    
+    footer {
+        padding: 0rem 1rem;
+    }
+
+        #contacts {
+            flex-direction: column;
+            gap: 2.6rem;
+            padding: 3.7rem 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contacts_text {
+            width: 100%;
+        }
+
+        #socials_buttons button {
+            pointer-events: none;
+        }
+
+        #contact_info {
+            width: 100%;
+        }
+
+        #contact_info h3 {
+            padding-bottom: 2.5rem;
+        }
+}
+
+/* viewports between 768px and 1000px (between tablet and desktop) */
+@media (min-width: 730px) and (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        padding: 0rem 2.5rem;
+        align-items: center;
+    }
+
+        #mainbar, #coffee_menu {
+            display: none;
+        }
+
+        #burger_icon {
+            display: inline;
+        }
+
+    #enjoy_section, #favorite_section, #about_section, #mobile_section {
+        padding: 0rem 2.5rem 6.25rem 2.5rem;
+    }
+
+    #enjoy_container {
+        width: 100%;
+        /* padding: 6.25rem 3.75rem; */
+    }
+
+    #background_video {
+        width: 78rem;
+    }
+
+    #enjoy_menu_changing_buttons #enjoy_menu_nohover {
+        display: none;
+    }
+
+    #enjoy_menu_changing_buttons #enjoy_menu_hover {
+        display: flex;
+    }
+
+    #favorite_section h2 {
+        line-height: 125%;
+    }
+
+        #outer_slider {
+            width: 70%;
+        }
+
+        /* #slider {
+            width: 70%;
+        } */
+
+        #favorite_slider div img {
+            padding-bottom: 1.1rem;
+        }
+
+        #favorite_slider button {
+            pointer-events: none;
+        }
+
+    #about_images {
+        width: 100%;
+        flex-direction: column;
+    }
+
+        #image1_box, #image4_box {
+            width: 100%;
+            background-position: center;
+            background-size: 105%;
+            pointer-events: none;
+        }
+
+        #image2_box, #image3_box {
+            display: none;
+        }
+
+    #mobile_section {
+        flex-direction: column;
+    }
+
+    #store_buttons a {
+        pointer-events: none;
+    }
+
+    #contacts {
+        flex-direction: column;
+        gap: 6.2rem;
+        padding: 6.2rem 3.7rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+        #contacts_text {
+            width: 100%;
+        }
+
+        #contacts_text h2 {
+            line-height: 125%;
+        }
+
+        #socials_buttons button {
+            pointer-events: none;
+        }
+
+        #contact_info {
+            width: 100%;
+        }
+
+        #contact_info a {
+            pointer-events: none;
+        }
+
+        #contact_info h3 {
+            padding-bottom: 2.5rem;
+        }
+
+        #phone_button {
+            width: 100%;
+        }
+}
